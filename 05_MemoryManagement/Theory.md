@@ -5,3 +5,5 @@
 3. Why not use heap for everything?
 
 4. Why are memory leaks bad?
+
+5. Why use valgrind to check for memory leaks?
