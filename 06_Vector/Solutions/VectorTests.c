@@ -32,6 +32,7 @@ void _TEST_DeleteVector()
 
 void _TEST_IsVectorEmpty()
 {
+	printf("%s started...\n", __func__);
 	Vector_int * vector = CreateVector(0);
 	assert(IsVectorEmpty(vector));
 	DeleteVector(vector);
@@ -43,8 +44,7 @@ void _TEST_GetSize()
 	printf("%s started...\n", __func__);
 	Vector_int * vector = CreateVector(0);
 	assert(GetSize(vector) == 0);
-	DeleteVector(vector);
-	vector = CreateVector(4);
+	vector->size = 4;
 	assert(GetSize(vector) == 4);
 	DeleteVector(vector);
 	printf("%s passed successfully.\n\n", __func__);
@@ -98,10 +98,11 @@ void _TEST_AccessLastElement()
 void _TEST_InsertElement()
 {
 	printf("%s started...\n", __func__);
-	Vector_int * vector = CreateVector(4);
+	Vector_int * vector = CreateVector(2);
 	vector->data[0] = 2;
 	vector->data[1] = 561329;
 	vector->size = 2;
+	InsertElement(vector, 5, 100);
 	InsertElement(vector, 5, 1);
 	InsertElement(vector, -30, 1);
 	assert(vector->data[0] == 2);
@@ -281,10 +282,10 @@ void _TEST_PopFrontElement()
 	assert(vector->data[0] == -3);
 	assert(vector->data[1] == 10);
 	assert(vector->data[2] == 561329);
-	PopBackElement(vector);
+	PopFrontElement(vector);
 	assert(vector->size == 2);
-	assert(vector->data[1] == 10);
-	assert(vector->data[2] == 561329);
+	assert(vector->data[0] == 10);
+	assert(vector->data[1] == 561329);
 	DeleteVector(vector);
 	printf("%s passed successfully.\n\n", __func__);
 }

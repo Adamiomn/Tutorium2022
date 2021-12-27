@@ -1,10 +1,13 @@
 #include <stdlib.h>
 
 #include "VectorTests.h"
+#include <stdio.h>
 
 
 int main()
 {
+	printf("Executing tests for Vector_int...\n\n");
+
 	_TEST_CreateVector();
 	_TEST_DeleteVector();
 	_TEST_IsVectorEmpty();

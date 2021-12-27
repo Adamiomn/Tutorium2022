@@ -23,7 +23,12 @@ bool MustResizeVector(const Vector_int * const vector)
 
 void ResizeVector(Vector_int * const vector)
 {
-	vector->data = realloc(vector->data, sizeof(int) * vector->capacity);
+	vector->data = realloc(vector->data, sizeof(*vector->data) * vector->capacity);
+	if (!vector->data)
+	{
+		fprintf(stderr, "ERROR when re-allocating memory for Vector_int's data.");
+		exit(EXIT_FAILURE);
+	}
 }
 
 
@@ -54,16 +59,26 @@ void PrintVectorContents(const Vector_int * const vector)
 
 Vector_int * CreateVector(const size_t initialCapacity)
 {
-	Vector_int * newVector = malloc(sizeof(Vector_int));
+	Vector_int * newVector = malloc(sizeof(*newVector));
+	if (!newVector)
+	{
+		fprintf(stderr, "ERROR when allocating memory for Vector_int.");
+		exit(EXIT_FAILURE);
+	}
 	newVector->size = 0;
 	newVector->capacity = initialCapacity;
-	if (initialCapacity == 0)
+	if (newVector->capacity == 0)
 	{
 		newVector->data = NULL;
 	}
 	else
 	{
-		newVector->data = malloc(sizeof(int) * newVector->capacity);
+		newVector->data = malloc(sizeof(*newVector->data) * newVector->capacity);
+		if (!newVector->data)
+		{
+			fprintf(stderr, "ERROR when allocating memory for Vector_int's data.");
+			exit(EXIT_FAILURE);
+		}
 	}
 	return newVector;
 }
@@ -122,6 +137,12 @@ void InsertElement(Vector_int * const vector, const int element, const size_t in
 		return;
 	}
 
+	// Vector must be contiguous
+	if (index > vector->size)
+	{
+		return;
+	}
+
 	// Extend capacity if needed
 	if (IsVectorFull(vector))
 	{
@@ -129,7 +150,7 @@ void InsertElement(Vector_int * const vector, const int element, const size_t in
 		ResizeVector(vector);
 	}
 
-	for (size_t i = vector->size; i > index; ++i)
+	for (size_t i = vector->size; i > index; --i)
 	{
 		vector->data[i] = vector->data[i - 1];
 	}
@@ -168,7 +189,7 @@ void RemoveElements(Vector_int * const vector, const int element)
 	const size_t elementCount = CountElements(vector, element);
 	for (size_t i = 0; i < elementCount; ++i)
 	{
-		RemoveElement(vector, element);
+		RemoveElement(vector, GetElementIndex(vector, element));
 	}
 }
 
