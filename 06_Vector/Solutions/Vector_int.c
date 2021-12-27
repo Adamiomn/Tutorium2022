@@ -23,11 +23,34 @@ bool MustResizeVector(const Vector_int * const vector)
 
 void ResizeVector(Vector_int * const vector)
 {
+	if (vector->capacity == 0)
+	{
+		free(vector->data);
+		vector->data = NULL;
+		return;
+	}
 	vector->data = realloc(vector->data, sizeof(*vector->data) * vector->capacity);
 	if (!vector->data)
 	{
 		fprintf(stderr, "ERROR when re-allocating memory for Vector_int's data.");
 		exit(EXIT_FAILURE);
+	}
+}
+
+
+void AdjustCapacity(Vector_int * const vector)
+{
+	if (IsVectorFull(vector))
+	{
+		if (vector->capacity == 0)
+		{
+			vector->capacity = 1;
+		}
+		else
+		{
+			vector->capacity *= 2;
+		}
+		ResizeVector(vector);
 	}
 }
 
@@ -144,11 +167,7 @@ void InsertElement(Vector_int * const vector, const int element, const size_t in
 	}
 
 	// Extend capacity if needed
-	if (IsVectorFull(vector))
-	{
-		vector->capacity *= 2;
-		ResizeVector(vector);
-	}
+	AdjustCapacity(vector);
 
 	for (size_t i = vector->size; i > index; --i)
 	{
@@ -186,31 +205,31 @@ void RemoveElements(Vector_int * const vector, const int element)
 		return;
 	}
 
-	const size_t elementCount = CountElements(vector, element);
+	const size_t elementCount = CountValues(vector, element);
 	for (size_t i = 0; i < elementCount; ++i)
 	{
 		RemoveElement(vector, GetElementIndex(vector, element));
 	}
 }
 
-size_t GetElementIndex(const Vector_int * const vector, const int element)
+long long GetElementIndex(const Vector_int * const vector, const int value)
 {
 	if (!vector)
 	{
-		return 0;
+		return -1;
 	}
 
 	for (size_t i = 0; i < vector->size; ++i)
 	{
-		if (vector->data[i] == element)
+		if (vector->data[i] == value)
 		{
 			return i;
 		}
 	}
-	return 0;
+	return -1;
 }
 
-size_t CountElements(const Vector_int * const vector, const int element)
+size_t CountValues(const Vector_int * const vector, const int value)
 {
 	if (!vector)
 	{
@@ -220,7 +239,7 @@ size_t CountElements(const Vector_int * const vector, const int element)
 	size_t count = 0;
 	for (size_t i = 0; i < vector->size; ++i)
 	{
-		if (vector->data[i] == element)
+		if (vector->data[i] == value)
 		{
 			++count;
 		}
@@ -228,9 +247,9 @@ size_t CountElements(const Vector_int * const vector, const int element)
 	return count;
 }
 
-bool ContainsElement(const Vector_int * const vector, const int element)
+bool ContainsValue(const Vector_int * const vector, const int value)
 {
-	return CountElements(vector, element) > 0;
+	return CountValues(vector, value) > 0;
 }
 
 void PushBackElement(Vector_int * const vector, const int element)
