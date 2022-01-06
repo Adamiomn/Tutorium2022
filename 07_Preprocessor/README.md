@@ -1,0 +1,2 @@
+From https://gcc.gnu.org/onlinedocs/cppinternals/Macro-Expansion.html:
+"I strongly recommend you have a good grasp of how the C and C++ standards require macros to be expanded before diving into this section, let alone the code!. If you don’t have a clear mental picture of how things like nested macro expansion, stringizing and token pasting are supposed to work, damage to your sanity can quickly result."

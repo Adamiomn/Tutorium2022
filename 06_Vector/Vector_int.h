@@ -12,12 +12,7 @@
  *    b) a size member that indicates the current number of elements in the vector
  *    c) a capacity member that indicates the current maximum number of elements in the vector.
  */
-typedef struct Vector_int
-{
-	int * data;
-	size_t size;
-	size_t capacity;
-} Vector_int;
+typedef struct Vector_int Vector_int;
 
 
 /**

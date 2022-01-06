@@ -2,6 +2,14 @@
 #include <stdio.h>
 
 
+struct Vector_int
+{
+	int * data;
+	size_t size;
+	size_t capacity;
+};
+
+
 void PrintVectorContents(const Vector_int * const vector)
 {
 	if (!vector)

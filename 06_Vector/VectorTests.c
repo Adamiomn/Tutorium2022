@@ -3,6 +3,14 @@
 #include <stdio.h>
 
 
+struct Vector_int
+{
+	int * data;
+	size_t size;
+	size_t capacity;
+};
+
+
 void _TEST_CreateVector()
 {
 	printf("%s started...\n", __func__);
