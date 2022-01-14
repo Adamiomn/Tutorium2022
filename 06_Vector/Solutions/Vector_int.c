@@ -24,11 +24,12 @@ bool IsIndexInBounds(const Vector_int * const vector, const size_t index)
 	return index < vector->size;
 }
 
-bool MustResizeVector(const Vector_int * const vector)
+bool MustShrinkVector(const Vector_int * const vector)
 {
 	return vector->size < (vector->capacity / 4);
 }
 
+// Resizes the vector's data member to reflect the capacity of the vector
 void ResizeVector(Vector_int * const vector)
 {
 	if (vector->capacity == 0)
@@ -42,23 +43,6 @@ void ResizeVector(Vector_int * const vector)
 	{
 		fprintf(stderr, "ERROR when re-allocating memory for Vector_int's data.");
 		exit(EXIT_FAILURE);
-	}
-}
-
-
-void AdjustCapacity(Vector_int * const vector)
-{
-	if (IsVectorFull(vector))
-	{
-		if (vector->capacity == 0)
-		{
-			vector->capacity = 1;
-		}
-		else
-		{
-			vector->capacity *= 2;
-		}
-		ResizeVector(vector);
 	}
 }
 
@@ -98,6 +82,7 @@ Vector_int * CreateVector(const size_t initialCapacity)
 	}
 	newVector->size = 0;
 	newVector->capacity = initialCapacity;
+
 	if (newVector->capacity == 0)
 	{
 		newVector->data = NULL;
@@ -175,7 +160,18 @@ void InsertElement(Vector_int * const vector, const int element, const size_t in
 	}
 
 	// Extend capacity if needed
-	AdjustCapacity(vector);
+	if (IsVectorFull(vector))
+	{
+		if (vector->capacity == 0)
+		{
+			vector->capacity = 1;
+		}
+		else
+		{
+			vector->capacity *= 2;
+		}
+		ResizeVector(vector);
+	}
 
 	for (size_t i = vector->size; i > index; --i)
 	{
@@ -199,7 +195,7 @@ void RemoveElement(Vector_int * const vector, const size_t index)
 	}
 	--vector->size;
 
-	if (MustResizeVector(vector))
+	if (MustShrinkVector(vector))
 	{
 		vector->capacity /= 2;
 		ResizeVector(vector);
@@ -213,10 +209,13 @@ void RemoveElements(Vector_int * const vector, const int element)
 		return;
 	}
 
-	const size_t elementCount = CountValues(vector, element);
-	for (size_t i = 0; i < elementCount; ++i)
+	for (size_t i = 0; i < vector->size; ++i)
 	{
-		RemoveElement(vector, GetElementIndex(vector, element));
+		if (vector->data[i] == element)
+		{
+			RemoveElement(vector, i);
+			--i;
+		}
 	}
 }
 
