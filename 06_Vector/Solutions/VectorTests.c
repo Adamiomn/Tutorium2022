@@ -33,9 +33,7 @@ void _TEST_CreateVector()
 void _TEST_DeleteVector()
 {
 	printf("%s started...\n", __func__);
-	Vector_int * vector = CreateVector(2);
-	DeleteVector(vector);
-	assert(vector);
+	// Difficult to test, use valgrind
 	printf("%s passed successfully.\n\n", __func__);
 }
 
