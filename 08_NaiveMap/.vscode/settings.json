@@ -1,0 +1,7 @@
+{
+	"files.associations": {
+		"stdio.h": "c",
+		"naivemap.h": "c",
+		"vector_int.h": "c"
+	}
+}
