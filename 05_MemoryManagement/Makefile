@@ -14,7 +14,7 @@ LIBS = -lm
 
 %.vgr: %.c
 	$(CC) $< -g -o $@.out $(LIBS)
-	valgrind --tool=memcheck ./$@.out
+	valgrind --tool=memcheck --leak-check=full ./$@.out
 
 
 clean:
