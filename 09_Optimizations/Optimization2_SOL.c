@@ -6,7 +6,7 @@
 	Task: Try to optimize the condition in the loop in the same way you did in Optimization1.
 	What happens?
 
-	Worse execution time because there are no branch misses.
+	Worse execution time because there were no branch misses.
 */
 
 
