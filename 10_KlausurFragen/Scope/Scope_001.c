@@ -12,7 +12,7 @@ int main()
 	return 0;
 }
 
-// Gib an, ob die Aussagen wahr (w) oder falsch (f) sind.
+// Gib an, ob die Aussagen jeweils wahr (w) oder falsch (f) sind.
 //		a) ☐ Die Variable COUNTER in Zeile 3 hat zum Beginn des Programms den Wert 0.
 //		b) ☐ Die Variable ITEM in Zeile 4 hat zum Beginn des Programms einen undefinierten Wert.
 //		c) ☐ Das print-Statement in Zeile 10 gibt garantiert 5 aus.
