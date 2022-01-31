@@ -6,3 +6,4 @@ int numbers[] = {1, 4, 10, -3, 0, 2};
 //		c) ☐ numbers == &numbers[1]
 //		d) ☐ *(numbers + 2) == numbers[2]
 //		e) ☐ *(numbers + 20) == numbers[20]
+//		f) ☐ (&numbers[4] - numbers) == 5
