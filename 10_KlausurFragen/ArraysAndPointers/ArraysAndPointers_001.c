@@ -1,14 +1,14 @@
-int vla[] = {2, 4, -1};
-int fsa[5] = {7, 0, 3};
+int dla[] = {2, 4, -1};
+int esa[5] = {7, 0, 3};
 
 // Beantworte die folgenden Fragen:
-//		a) Wie viele Elemente sind in vla enthalten?
+//		a) Wie viele Elemente sind in dla enthalten?
 //				Antwort: 
-//		b) Welchen Wert hat vla[2]?
+//		b) Welchen Wert hat dla[2]?
 //				Antwort: 
-//		c) Wie viele Elemente sind in fsa enthalten?
+//		c) Wie viele Elemente sind in esa enthalten?
 //				Antwort: 
-//		d) Welchen Wert hat fsa[0]?
+//		d) Welchen Wert hat esa[0]?
 //				Antwort: 
-//		e) Welchen Wert hat fsa[4]?
+//		e) Welchen Wert hat esa[4]?
 //				Antwort: 
