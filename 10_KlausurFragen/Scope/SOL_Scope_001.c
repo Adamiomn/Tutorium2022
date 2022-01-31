@@ -21,4 +21,4 @@ int main()
 //		a) COUNTER ist eine globale Variable, wird also mit dem Standardwert für int initialisiert, welcher 0 ist.
 //		b) ITEM ist eine globale Variable, wird also mit dem Standardwert für void-pointer initialisiert, welcher NULL ist (funktioniert äquivalent mit jedem anderen Typ von Pointer).
 //		c) COUNTER shadowed die globale Variable, deshalb wir 5 ausgegeben.
-//		d) item ist eine lokale Variable, wird also nicht automatisch mit NULL initialisiert, damit wird hier ein Garbage Wert ausgegeben
+//		d) item ist eine lokale Variable, wird also nicht automatisch mit NULL initialisiert. Deshalb wird hier ein Garbage-Wert ausgegeben.

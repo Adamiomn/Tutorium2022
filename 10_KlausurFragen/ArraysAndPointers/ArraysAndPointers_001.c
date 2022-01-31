@@ -1,5 +1,3 @@
-// Gegeben seien die folgenden Arrays:
-
 int vla[] = {2, 4, -1};
 int fsa[5] = {7, 0, 3};
 

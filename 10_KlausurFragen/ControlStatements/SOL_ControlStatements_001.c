@@ -1,5 +1,3 @@
-// Gegeben sei das folgende switch-Statement:
-
 switch (number)
 {
 	case 1:

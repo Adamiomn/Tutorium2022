@@ -1,4 +1,6 @@
-// Gegeben sei das folgende Programm:
+// Gegeben sei das folgende (vollständige) Programm:
+
+#include <stdio.h>
 
 int COUNTER;
 void * ITEM;

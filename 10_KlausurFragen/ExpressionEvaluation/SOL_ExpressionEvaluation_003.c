@@ -6,7 +6,7 @@
 // Erklärung: 
 //			a) Wir lösen zuerst die Klammern auf.
 //					(int)NULL
-//					NULL ist 0 und wird mit (int) auf einen int gecasted.
+//					NULL wird zu 0 umgewandelt (vom Standard garantiert)
 //					0 + 1 = 1
 //					1 << 4 = 16
 //			b) Wir werten nun die Modulo-Rechnung aus. Der Modulo-Operator ist links-nach-rechts-assoziativ (wir werten von links nach rechts aus). Achtung! Das ist nicht bei allen Operatoren so.

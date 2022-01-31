@@ -1,8 +1,6 @@
-// Welchen Wert hat k?
-
 bool k = true | false;
 
-// Wähle die richtige Antwort aus:
+// Welchen Wert hat k?
 //		a) true
 //		b) false
 //		c) Nicht definiert (undefined behaviour)

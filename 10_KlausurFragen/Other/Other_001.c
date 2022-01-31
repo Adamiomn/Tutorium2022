@@ -1,14 +1,7 @@
-// Gegeben sei der folgende Code-Ausschnitt:
+int const * (*x[5])(int)
 
-enum colors {
-	black = 0,
-	red = 1,
-	green = 2,
-	blue = 3,
-	white = 5
-};
-
-// Kreuze an welche der folgenden Zuweisungen korrekt (w) und welche inkorrekt (f) sind:
-//		a) ☐ colors myColor = 0;
-//		b) ☐ enum colors myColor = green;
-//		c) ☐ enum colors myColor = 4;
+// Welche der folgenden Aussagen ist korrekt?
+//		a) x ist ein Pointer auf ein Array von Integern, auf welche nur konstante Pointer zeigen dürfen.
+//		b) x ist ein Array von Pointern auf Integer, welche nur konstanten Pointern zugewiesen werden dürfen.
+//		c) x ist ein Pointer auf ein Array aus 5 Elementen von Funktionen, welche einen int Parameter erwarten und einen konstanten Pointer auf int zurückgeben.
+//		d) x ist ein Array aus 5 Pointern auf Funktionen, welche einen int Parameter erwarten und einen Pointer auf konstante int zurückgeben.
