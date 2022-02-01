@@ -5,7 +5,7 @@ void qsort(void * array_of_elements,
 		   int (*comparison_function)(const void *, const void *));
 
 // Gegeben sei außerdem die Variable numbers...
-float numbers[] = {3.1415f, 13.337f, 9.81f, 2.71828f};
+float numbers[] = {3.1415f, 13.37f, 9.81f, 2.71828f};
 
 // ...sowie die folgenden Funktionen (hier nur deklariert, wir nehmen an, dass sie irgendwo korrekt definiert sind):
 int GenericComparator(const void *, const void *);

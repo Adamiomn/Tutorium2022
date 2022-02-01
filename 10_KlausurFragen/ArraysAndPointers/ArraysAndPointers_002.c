@@ -10,9 +10,9 @@ char arrString[] = "World";
 //				Antwort: 
 //		d) Ist die Zuweisung arrString[4] = 'p' erlaubt? (ja / nein)
 //				Antwort: 
-//		e) Was ergibt der Ausdruck ptrString == "Hello"? (true / false)
+//		e) Was ergibt der Ausdruck ptrString == (char *)"Hello"? (true / false)
 //				Antwort: 
-//		f) Was ergibt der Ausdruck arrString == "Hello"? (true / false)
+//		f) Was ergibt der Ausdruck arrString == "World"? (true / false)
 //				Antwort: 
 //		g) Was ergibt der Ausdruck sizeof(arrString) == sizeof(ptrString)? (true / false)
 //				Antwort: 

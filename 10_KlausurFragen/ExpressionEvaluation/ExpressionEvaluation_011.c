@@ -1,7 +1,7 @@
 int * ptr = NULL;
 ptr && *ptr > 0;
 
-// Was ergibt der Ausdruck in Zeile 4?
+// Was ergibt der Ausdruck in Zeile 2?
 //		a) true
 //		b) false
 //		c) Segmentation Fault (unerlaubter Speicherzugriff)

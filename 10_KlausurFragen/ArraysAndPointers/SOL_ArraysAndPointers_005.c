@@ -5,8 +5,8 @@ int numbers[] = {1, 4, 10, -3, 0, 2};
 //		b) t	*numbers == 1
 //		c) f	numbers == &numbers[1]
 //		d) t	*(numbers + 2) == numbers[2]
-//		e) t	*(numbers + 20) == numbers[20]
-//		f) f	(&numbers[4] - numbers) == 5
+//		e) t	(numbers + 20) == &numbers[20]
+//		f) f	(&numbers[4] - numbers) == 3
 // Erklärung:
 //		a) numbers[1] greift auf das zweite Element des Arrays zu (zero-indexing!), welches 4 ist.
 //		b) Wird ein Array wie ein Pointer verwendet, so ist numbers dasselbe wie &numbers[0]. Damit stimmt der Ausdruck, da auf das erste Element des Arrays zugegriffen wird, welches 1 ist.

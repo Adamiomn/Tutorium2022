@@ -1,5 +1,6 @@
 // In math.h sind die Funktionen double log(double) und double log10(double) deklariert.
 
+#include <math.h>
 #define LOG_WITH_BASE(value, base) log##base(value)
 
 // Beantworte die folgenden Fragen:

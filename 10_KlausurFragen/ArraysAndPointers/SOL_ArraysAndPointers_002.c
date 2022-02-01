@@ -14,10 +14,10 @@ char arrString[] = "World";
 //		d) Ist die Zuweisung arrString[4] = 'p' erlaubt? (ja / nein)
 //				Antwort: ja
 //				Erklärung: Obwohl "World" wie in c) im Read-Only Speicher abgelegt ist, ist arrString ein Array. Deshalb werden die einzelnen Zeichen von "World" in arrString hineinkopiert und sie können verändert werden.
-//		e) Was ergibt der Ausdruck ptrString == "Hello"? (true / false)
+//		e) Was ergibt der Ausdruck ptrString == (char *)"Hello"? (true / false)
 //				Antwort: true
 //				Erklärung: ptrString zeigt auf das String-Literal "Hello", welches einmalig im Speicher abgelegt ist (siehe c)).
-//		f) Was ergibt der Ausdruck arrString == "Hello"? (true / false)
+//		f) Was ergibt der Ausdruck arrString == "World"? (true / false)
 //				Antwort: false
 //				Erklärung: arrString ist dasselbe wie &arrString[0], zeigt also auf das erste Element. Dieses ist zwar inhaltlich dasselbe wie im Literal "World", die Adresse ist jedoch verschieden, da arrString ein Array ist und dadurch eigenen Speicher hat - im Gegensatz zu ptrString.
 //		g) Was ergibt der Ausdruck sizeof(arrString) == sizeof(ptrString)? (true / false)

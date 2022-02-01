@@ -1,6 +1,12 @@
-#define VARPRINT(x) printf(#x ": %s\n", x)
-int x = 10;
-VARPRINT(x);
+#include <stdio.h>
+#define VARPRINT(x) printf(#x ": %d", x)
+
+int main()
+{
+	int x = 10;
+	VARPRINT(x);
+	return 0;
+}
 
 // Was wird ausgegeben?
 //		a) 10: 10
