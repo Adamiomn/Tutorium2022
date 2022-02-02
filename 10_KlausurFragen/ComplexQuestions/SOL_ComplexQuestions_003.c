@@ -43,6 +43,6 @@ int main()
 //		a) Nachdem eine Zahl eingegeben wurde, wird der do-Block ausgeführt. Also wird sofort 1 ausgegeben.
 //		b) Ist i 1, so wird nach kurzem 3 ausgegeben und das Programm beendet.
 //		c) Ist i 1, so ist ~i ^ 1 wahr, da ~1 ^ 1 alle Bits auf 1 setzt.
-//		d) Ist i 1, so ist ~i ^ 1 wahr (siehe c)). i erfährt einen Vorzeichenwechsel (*= (i < 0) - (i > 0)) und es ist i == -1 wahr. Daher wird 3 ausgegeben.
-//		e) Ist i 0, so ist ~i ^ 1 trotzdem wahr. i erfährt einen Vorzeichenwechsel wie in d), was nichts am Wert ändert. Deshalb ist i == 0 wahr und es wird auch noch 5 ausgegeben.
-//		f) Ist i beispielsweise 2, so ist ~i ^ 1 wahr, i erfährt einen Vorzeichenwechsel und ist nun -2. Keine der if-Bedingungen treffen zu, die Schleifenbedingung stimmt jedoch noch. ~i ^ 1 ist beim zweiten Durchlauf erneut wahr und i wird wieder auf 2 gesetzt.
+//		d) Ist i 1, so ist ~i ^ 1 wahr (siehe c)). Das Vorzeichen von i wird negativ (*= (i < 0) - (i > 0)) und es ist i == -1 wahr. Daher wird 3 ausgegeben.
+//		e) Ist i 0, so ist ~i ^ 1 trotzdem wahr. Das Vorzeichen von i wird negativ wie in d), was nichts am Wert ändert. Deshalb ist i == 0 wahr und es wird auch noch 5 ausgegeben.
+//		f) Ist i beispielsweise 2, so ist ~i ^ 1 wahr, das Vorzeichen von i wird negativ und ist nun -2. Keine der if-Bedingungen treffen zu, die Schleifenbedingung stimmt jedoch noch. ~i ^ 1 ist beim zweiten Durchlauf erneut wahr und i bleibt -2. Der Rest ist identisch zum ersten Schleifendurchgang und wir haben eine Endlosschleife.
