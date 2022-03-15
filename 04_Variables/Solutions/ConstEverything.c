@@ -18,14 +18,14 @@ int main(void)
 	printf("Enter the four polynomial coefficients:\n");
 	scanf("%lf %lf %lf %lf", &a, &b, &c, &d);
 
-	double a_deriv = 3 * a;
-	double b_deriv = 2 * b;
-	double c_deriv = c;
+	const double a_deriv = 3 * a;
+	const double b_deriv = 2 * b;
+	const double c_deriv = c;
 	double x = 0;
 
-	double errorThreshold = 0.0001;
+	const double errorThreshold = 0.0001;
 	double error = errorThreshold;
-	double iterationLimit = 10000;
+	const double iterationLimit = 10000;
 	int iterations = 0;
 	while (fabs(error) >= errorThreshold && iterations < iterationLimit)
 	{
