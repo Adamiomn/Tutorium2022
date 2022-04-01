@@ -17,7 +17,7 @@ int main(void)
 
 	unsigned bitCounter = 0;
 	// Solution 1: portable, readable, fast
-	for (unsigned i = 0; i < sizeof(unsigned) * 8; i++)
+	for (unsigned i = 0; i < sizeof(unsigned) * 8; ++i)
 	{
 		bitCounter += (inputNumber >> i) & 1;
 	}
