@@ -10,18 +10,17 @@
 
 int main(void)
 {
-	int input = 0;
-	printf("Enter a number:\n");
-	scanf("%d", &input);
-
-	if (input < 0)
+	unsigned input = 0;
+	printf("Enter a non-negative number:\n");
+	if (scanf("%u", &input) < 1)
 	{
+		printf("Invalid input!\n");
 		return EXIT_FAILURE;
 	}
 
 
 	/*----------------- (1) ----------------*/
-	int i = input;
+	unsigned i = input;
 	long sum = 0;
 	while (i > 0)
 	{
