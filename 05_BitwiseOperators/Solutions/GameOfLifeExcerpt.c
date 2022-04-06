@@ -17,7 +17,7 @@ int main(void)
 		return EXIT_FAILURE;
 	}
 
-	// Comput and assign to "newCellStatus" whether the cell should be dead (0) or alive (1) in the next iteration.
+	// Compute and assign to "newCellStatus" whether the cell should be dead (0) or alive (1) in the next iteration.
 	int newCellStatus;
 	// Solution 1: readable, slow
 	if (isCellAlive)
@@ -43,10 +43,11 @@ int main(void)
 		}
 	}
 	// Solution 2: like solution 1, but branchless
-	newCellStatus = (isCellAlive & (numberOfAliveNeighbors == 2 || numberOfAliveNeighbors == 3)) |
+	newCellStatus = (isCellAlive && (numberOfAliveNeighbors == 2 || numberOfAliveNeighbors == 3)) ||
 					(numberOfAliveNeighbors == 3);
-	// Solution 3: like solution 2, but optimized using logic rules
+	// Solution 3: like solution 2, but optimized using logic rules and changing logical operators to bitwise operators
 	newCellStatus = (isCellAlive & (numberOfAliveNeighbors == 2)) | (numberOfAliveNeighbors == 3);
+	printf("newCellStatus: %d\n", newCellStatus);
 
 	return EXIT_SUCCESS;
 }

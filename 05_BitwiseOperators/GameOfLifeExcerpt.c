@@ -17,8 +17,9 @@ int main(void)
 		return EXIT_FAILURE;
 	}
 
-	// Comput and assign to "newCellStatus" whether the cell should be dead (0) or alive (1) in the next iteration.
+	// Compute and assign to "newCellStatus" whether the cell should be dead (0) or alive (1) in the next iteration.
 	int newCellStatus;
+	printf("newCellStatus: %d\n", newCellStatus);
 
 	return EXIT_SUCCESS;
 }
