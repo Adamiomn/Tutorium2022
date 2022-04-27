@@ -1,6 +1,6 @@
 CC = gcc
 CFLAGS = -Werror -Wall -Wextra -Wpedantic -std=c11
-LIBS = -lm
+LDFLAGS = -lm
 
 Vector: main.c VectorTests.c Vector_int.c
 	$(CC) $(CFLAGS) $^ -o Vector.out

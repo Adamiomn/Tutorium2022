@@ -1,15 +1,15 @@
 CC = gcc
 CFLAGS = -Werror -Wall -Wextra -Wpedantic -std=c11
-LIBS = -lm
+LDFLAGS = -lm
 
 
 
 %.b: %.o
-	$(CC) $(CFLAGS) $< -o $@.out $(LIBS)
+	$(CC) $(CFLAGS) $< -o $@.out $(LDFLAGS)
 	./$@.out
 
 %.dang: %.c
-	$(CC) $< -o $@.out $(LIBS)
+	$(CC) $< -o $@.out $(LDFLAGS)
 	./$@.out
 
 

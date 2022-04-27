@@ -1,6 +1,6 @@
 CC = gcc
 CFLAGS = -Werror -Wall -Wextra -Wpedantic -Wconversion -Wshadow -std=c11
-LIBS = -lm
+LDFLAGS = -lm
 
 NaiveMap: main.c NaiveMapTests.c NaiveMap.c
 	$(CC) $(CFLAGS) $^ -o NaiveMap.out

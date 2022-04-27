@@ -1,13 +1,13 @@
 CC = gcc
 CFLAGS = -Werror -Wall -Wextra -Wpedantic -Wconversion -Wshadow -Wpointer-arith -Wstrict-prototypes -Wmissing-prototypes -Wunreachable-code -Wredundant-decls -Wold-style-declaration -Wold-style-definition -std=c11 -O3
-LIBS = -lm
+LDFLAGS = -lm
 
 %.b: %.c
-	$(CC) $(CFLAGS) $? -o $@ $(LIBS)
+	$(CC) $(CFLAGS) $? -o $@ $(LDFLAGS)
 	./$@
 
 %.d: %.c
-	$(CC) $? -o $@ $(LIBS)
+	$(CC) $? -o $@ $(LDFLAGS)
 	./$@
 
 clean:
