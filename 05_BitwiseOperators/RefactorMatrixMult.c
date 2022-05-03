@@ -6,7 +6,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-int main()
+int main(void)
 {
 	int a[10][10], b[10][10], mul[10][10], r, c, i, j, k;
 	printf("enter the number of row=");
