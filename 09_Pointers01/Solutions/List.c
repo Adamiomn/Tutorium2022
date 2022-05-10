@@ -12,10 +12,9 @@ int main(void)
 	int age = 21;
 	char name[] = "Sara";
 	double weight = 62.3;
-
-	// TODO: Create list and fill it with pointers to the variables above
-
-	// TODO: Print the list
-
+	void * list[] = {(void *)&age, (void *)&name, (void *)&weight};
+	printf("age: %d\n", *(int *)list[0]);
+	printf("name: %s\n", (char *)list[1]);
+	printf("weight: %lf\n", *(double *)list[2]);
 	return EXIT_SUCCESS;
 }

@@ -4,13 +4,11 @@
 
 /*
 	Task:
-		a)	Write a function "CharMangler" that takes as input
+		a) Write a function "CharMangler" that takes as input
 				i) char array
 				ii) a function pointer that takes a char and returns a char
-			The function should apply the function that was passed to all the characters in the char
-   array and overwrite the respective char. The "CharMangler" function does not return anything. b)
-   Write a function that you could pass to "CharMangler" and call "CharMangler" with a string of
-   your choice.
+		   The function should apply the function that was passed to all the characters in the char array and overwrite the respective char. The "CharMangler" function does not return anything.
+		b) Write a function that you could pass to "CharMangler" and call "CharMangler" with a string of your choice.
 */
 
 
