@@ -1,7 +1,3 @@
-#include <stdio.h>
-#include <stdlib.h>
-
-
 /*
 	Task:
 		a)	Write a function "CharMangler" that takes as input
@@ -11,6 +7,11 @@
    array. The "CharMangler" function does not return anything. b)	Write a function that you could
    pass to "CharMangler" and call "CharMangler" with a string of your choice.
 */
+
+
+
+#include <stdio.h>
+#include <stdlib.h>
 
 
 void CharMangler(char * string, char function_ptr(char))
@@ -27,7 +28,6 @@ char AAAAAAAAA(char input)
 {
 	return 'A';
 }
-
 
 
 int main(void)
@@ -48,5 +48,5 @@ int main(void)
 	CharMangler(string3, AAAAAAAAA);
 	printf("after: %s\n\n", string3);
 
-	return 0;
+	return EXIT_SUCCESS;
 }

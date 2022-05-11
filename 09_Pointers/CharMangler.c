@@ -31,5 +31,5 @@ int main(void)
 	// TODO call function
 	printf("after: %s\n\n", string3);
 
-	return 0;
+	return EXIT_SUCCESS;
 }
