@@ -3,8 +3,11 @@
 	I.e. if the input is negative, print -1, if the input is 0, print 0 and if the input is positive, print 1.
 */
 
+
+
 #include <stdio.h>
 #include <stdlib.h>
+
 
 int main(void)
 {

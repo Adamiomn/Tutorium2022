@@ -40,6 +40,7 @@ void Print2DArray_Native(size_t rows, size_t columns, int array[rows][columns])
 	}
 }
 
+
 void Print2DArray_Indirection(int ** array, size_t rows, size_t columns)
 {
 	for (size_t i = 0; i < rows; i++)

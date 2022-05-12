@@ -3,6 +3,7 @@
 */
 
 
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -17,6 +18,7 @@ long CalculateSum(const unsigned number)
 	return sum;
 }
 
+
 long long CalculateFactorial(const unsigned number)
 {
 	long long factorial = 1;
@@ -26,6 +28,7 @@ long long CalculateFactorial(const unsigned number)
 	}
 	return factorial;
 }
+
 
 int IsPrime(const unsigned number)
 {

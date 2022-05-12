@@ -3,11 +3,14 @@
 	Then, print the length of the strings already given in the main function.
 */
 
+
+
 #include <stdio.h>
 #include <stdlib.h>
 
 
 // TODO: implement GetStringLength
+
 
 int main(void)
 {

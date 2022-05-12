@@ -3,8 +3,11 @@
 	Can you do it without using if-else?
 */
 
+
+
 #include <stdio.h>
 #include <stdlib.h>
+
 
 int main(void)
 {

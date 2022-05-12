@@ -2,8 +2,11 @@
 	Task: Use scanf to read integers from the standard input until the user types in something other than a number or has reached the limit of 100 integers. Then print the integers back to the user, separated by commas.
 */
 
+
+
 #include <stdio.h>
 #include <stdlib.h>
+
 
 int main(void)
 {

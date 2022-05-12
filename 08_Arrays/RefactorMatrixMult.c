@@ -4,8 +4,11 @@
 */
 
 
+
 #include <stdio.h>
 #include <stdlib.h>
+
+
 int main(void)
 {
 	int a[10][10], b[10][10], mul[10][10], r, c, i, j, k;
@@ -51,5 +54,5 @@ int main(void)
 		}
 		printf("\n");
 	}
-	return 0;
+	return EXIT_SUCCESS;
 }

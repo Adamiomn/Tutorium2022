@@ -2,6 +2,8 @@
 	Task: Calculate the euclidian norm of the sum of vector1 and vector2 (the norm is the square root of the sum of the squares of all components).
 */
 
+
+
 #include <math.h>
 #include <stdio.h>
 #include <stdlib.h>

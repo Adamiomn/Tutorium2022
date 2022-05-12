@@ -8,8 +8,11 @@
 		  10,   44,  -28,  -22, -66
 */
 
+
+
 #include <stdio.h>
 #include <stdlib.h>
+
 
 int main(void)
 {

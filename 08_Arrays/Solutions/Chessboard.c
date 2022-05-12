@@ -7,8 +7,11 @@
 		4) 0 is black and 1 is white
 */
 
+
+
 #include <stdio.h>
 #include <stdlib.h>
+
 
 int main(void)
 {

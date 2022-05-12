@@ -1,7 +1,3 @@
-#include <stdio.h>
-#include <stdlib.h>
-
-
 /*
 	Task:
 		a) Write a function "CharMangler" that takes as input
@@ -11,6 +7,10 @@
 		b) Write a function that you could pass to "CharMangler" and call "CharMangler" with a string of your choice.
 */
 
+
+
+#include <stdio.h>
+#include <stdlib.h>
 
 
 int main(void)

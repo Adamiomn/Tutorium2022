@@ -3,8 +3,11 @@
 	The result should be 6 22 -21 26 -15 30 -10 25
 */
 
+
+
 #include <stdio.h>
 #include <stdlib.h>
+
 
 int main(void)
 {

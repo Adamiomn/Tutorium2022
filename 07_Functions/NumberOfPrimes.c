@@ -2,6 +2,8 @@
 	Task: Write a function that counts the number of primes in a given range. Think about what parameters the function should take and what can be const.
 */
 
+
+
 #include <stdio.h>
 #include <stdlib.h>
 
