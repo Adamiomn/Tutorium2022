@@ -1,14 +1,14 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <sys/resource.h>
-
-
 /*
 	Task:
 		a) Approximate the stack size experimentally by causing a stack overflow.
 		b) Check the approximation with the actual stack limit.
 */
 
+
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <sys/resource.h>
 
 
 int main(void)

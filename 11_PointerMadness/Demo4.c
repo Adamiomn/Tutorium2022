@@ -1,11 +1,11 @@
-#include <stdio.h>
-#include <stdlib.h>
-
-
 /*
 	Task: Decide which lines are legal and which could result in undefined behaviour.
 */
 
+
+
+#include <stdio.h>
+#include <stdlib.h>
 
 
 // In total:
@@ -19,7 +19,6 @@ void PrintStringConstEvil(const char * const string)
 		++evilCast;					  //
 	}
 }
-
 
 
 int main(void)

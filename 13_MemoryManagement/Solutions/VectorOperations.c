@@ -1,14 +1,13 @@
-#include <stdio.h>
-#include <stdlib.h>
-
 /*
 	Task:
-		a) Write a function "VectorOperation" that takes two int arrays of the same length and and a
-   function pointer. The function should go through the arrays, take the two elements at the same
-   position and calculate a new element using the function pointer. This new element is saved in a
-   new array and returned from the function. b) Write a few possible functions to pass as a function
-   pointer.
+		a) Write a function "VectorOperation" that takes two int arrays of the same length and and a function pointer. The function should go through the arrays, take the two elements at the same position and calculate a new element using the function pointer. This new element is saved in a new array and returned from the function.
+		b) Write a few possible functions to pass as a function pointer.
 */
+
+
+
+#include <stdio.h>
+#include <stdlib.h>
 
 
 void PrintVector(const int vector[], size_t length)
@@ -20,20 +19,24 @@ void PrintVector(const int vector[], size_t length)
 	printf("%d\n", vector[length - 1]);
 }
 
+
 int VectorAddition(const int elem1, const int elem2)
 {
 	return elem1 + elem2;
 }
+
 
 int VectorMultiplication(const int elem1, const int elem2)
 {
 	return elem1 * elem2;
 }
 
+
 int VectorMin(const int elem1, const int elem2)
 {
 	return elem1 < elem2 ? elem1 : elem2;
 }
+
 
 int VectorMax(const int elem1, const int elem2)
 {

@@ -1,7 +1,3 @@
-#include <stdio.h>
-#include <stdlib.h>
-
-
 /*
 	Task: Write a program that does the following:
 		1) Takes a 4-digit input number using scanf
@@ -11,11 +7,13 @@
 				Digit 3 from the left: if not 0, the caller comes from Austria
 				Digit 4 from the left: if not 0, the caller likes winter
 		   Edit the provided function "ExtractDigits" to give the desired behaviour and save the
-   individual properties as storage efficient as possible, using a bit field. 3) Print appropriate
-   messages in "main" depending on the properties given. You can use the messages commented out at
-   the end of "main".
+	individual properties as storage efficient as possible, using a bit field. 3) Print appropriate messages in "main" depending on the properties given. You can use the messages commented out at the end of "main".
 */
 
+
+
+#include <stdio.h>
+#include <stdlib.h>
 
 
 typedef struct options
@@ -34,7 +32,6 @@ options ExtractDigits(unsigned number)
 					  .option3 = (number / 10) % 10 != 0,
 					  .option4 = number % 10 != 0};
 }
-
 
 
 int main(void)

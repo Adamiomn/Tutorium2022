@@ -1,12 +1,11 @@
-#include <stdio.h>
-#include <stdlib.h>
-
-
 /*
-	Task: Decide which lines are legal and correct the ones that aren't. Also decide if something
-   should be added to make the code less error-prone.
+	Task: Decide which lines are legal and correct the ones that aren't. Also decide if something should be added to make the code less error-prone.
 */
 
+
+
+#include <stdio.h>
+#include <stdlib.h>
 
 
 struct point
@@ -15,8 +14,6 @@ struct point
 	int y;
 	char name[10];
 };
-
-
 
 int main(void)
 {

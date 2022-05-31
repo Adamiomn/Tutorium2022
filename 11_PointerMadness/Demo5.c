@@ -1,11 +1,11 @@
-#include <stdio.h>
-#include <stdlib.h>
-
-
 /*
 	Task: Decide which lines are legal and which could result in undefined behaviour.
 */
 
+
+
+#include <stdio.h>
+#include <stdlib.h>
 
 
 // In total:
@@ -18,7 +18,6 @@ void PrintReinterpretedString(const char * const string)
 		++integer;					 //
 	}
 }
-
 
 
 int main(void)

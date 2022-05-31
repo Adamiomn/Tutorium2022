@@ -1,29 +1,33 @@
-#include <stdio.h>
-#include <stdlib.h>
-
-
 /*
 	Task: Decide which lines are legal and which could result in undefined behaviour.
 */
 
 
 
-// In total:
+#include <stdio.h>
+#include <stdlib.h>
+
+
+// In total: Legal
 void CountingDown(const unsigned * const uint_ptr)
 {
-	unsigned count = *uint_ptr;	   // Legal
-	while (count)				   // Legal
+	// Legal, we are just dereferencing the value and copying it into "count"
+	unsigned count = *uint_ptr;
+	// Legal, count is not const
+	while (count)
 	{
-		printf("%d\n", count--);	// Legal
+		// Legal, count is not const
+		printf("%d\n", count--);
 	}
 }
 
 
-
 int main(void)
 {
-	unsigned innocent_int = 5;		// Legal
-	CountingDown(&innocent_int);	// Legal
+	// Legal, nothing interesting here
+	unsigned innocent_int = 5;
+	// Legal, even though "innocent_int" is not const, the function will make its usage more restrictive, which is okay
+	CountingDown(&innocent_int);
 
 	return EXIT_SUCCESS;
 }

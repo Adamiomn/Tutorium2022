@@ -1,12 +1,11 @@
-#include <stdio.h>
-#include <stdlib.h>
-
-
 /*
-	Task: Decide which lines are legal and which could result in undefined behaviour. Also, does
-   this compile?
+	Task: Decide which lines are legal and which could result in undefined behaviour. Also, does this compile?
 */
 
+
+
+#include <stdio.h>
+#include <stdlib.h>
 
 
 // In total:
@@ -19,7 +18,6 @@ void CountingDownEvil(const unsigned * const uint_ptr)
 		printf("%d\n", (*evilCast)--);	  //
 	}
 }
-
 
 
 int main(void)

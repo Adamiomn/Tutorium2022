@@ -1,13 +1,12 @@
+/*
+	Task: Decide which lines are legal and correct the ones that aren't. Also decide if something should be added to make the code less error-prone.
+*/
+
+
+
 #include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
-
-
-/*
-	Task: Decide which lines are legal and correct the ones that aren't. Also decide if something
-   should be added to make the code less error-prone.
-*/
-
 
 
 typedef struct point
@@ -30,6 +29,7 @@ bool ArePointsEqual(const point * const point1, const point * const point2)
 	}
 	return true;
 }
+
 
 point AddPoints(const point * const point1, const point * const point2)
 {

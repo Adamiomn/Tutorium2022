@@ -18,7 +18,7 @@ struct NaiveMap
 
 /*----------------------------------- Private utility functions -----------------------------------*/
 
-void ReallocateMapMemory(NaiveMap * const map)
+static void ReallocateMapMemory(NaiveMap * const map)
 {
 	map->mapEntries = realloc(map->mapEntries, sizeof(*map->mapEntries) * map->size);
 	if (!map->mapEntries)
@@ -28,7 +28,7 @@ void ReallocateMapMemory(NaiveMap * const map)
 	}
 }
 
-int GetKeyIndex(const NaiveMap * const map, const char * key)
+static int GetKeyIndex(const NaiveMap * const map, const char * key)
 {
 	for (size_t i = 0; i < map->size; ++i)
 	{
@@ -40,7 +40,7 @@ int GetKeyIndex(const NaiveMap * const map, const char * key)
 	return -1;
 }
 
-int GetValueIndex(const NaiveMap * const map, const void * const value)
+static int GetValueIndex(const NaiveMap * const map, const void * const value)
 {
 	for (size_t i = 0; i < map->size; ++i)
 	{
@@ -52,7 +52,7 @@ int GetValueIndex(const NaiveMap * const map, const void * const value)
 	return -1;
 }
 
-void AddKeyValuePair(NaiveMap * const map, const char * key, void * const value)
+static void AddKeyValuePair(NaiveMap * const map, const char * key, void * const value)
 {
 	map->mapEntries[map->size - 1].key = malloc(sizeof(char) * (strlen(key) + 1));
 	if (!map->mapEntries[map->size - 1].key)
@@ -65,7 +65,7 @@ void AddKeyValuePair(NaiveMap * const map, const char * key, void * const value)
 	map->mapEntries[map->size - 1].value = value;
 }
 
-void RemoveKeyValuePair(NaiveMap * const map, const size_t index)
+static void RemoveKeyValuePair(NaiveMap * const map, const size_t index)
 {
 	free(map->mapEntries[index].key);
 	for (size_t j = index; j < map->size - 1; ++j)
@@ -115,7 +115,10 @@ bool Map_IsEmpty(const NaiveMap * const map)
 	return !map || map->size == 0;
 }
 
-bool Map_Insert(NaiveMap * const map, const char * key, void * const value, const bool allowReassignment)
+bool Map_Insert(NaiveMap * const map,
+				const char * key,
+				void * const value,
+				const bool allowReassignment)
 {
 	if (!map)
 	{
@@ -133,7 +136,8 @@ bool Map_Insert(NaiveMap * const map, const char * key, void * const value, cons
 	}
 
 	++map->size;
-	ReallocateMapMemory(map);	// reallocating memory every time we add an element is wasteful but is done here for simplicity, geometric resizing would be preferred
+	ReallocateMapMemory(
+	  map);	   // reallocating memory every time we add an element is wasteful but is done here for simplicity, geometric resizing would be preferred
 	AddKeyValuePair(map, key, value);
 
 	return true;
@@ -180,7 +184,7 @@ size_t Map_RemoveByValue(NaiveMap * const map, const void * value)
 
 	size_t removedItemCount = 0;
 	int valueIndex;
-	while((valueIndex = GetValueIndex(map, value)) != -1)
+	while ((valueIndex = GetValueIndex(map, value)) != -1)
 	{
 		RemoveKeyValuePair(map, (size_t)valueIndex);
 		++removedItemCount;
@@ -188,7 +192,9 @@ size_t Map_RemoveByValue(NaiveMap * const map, const void * value)
 	return removedItemCount;
 }
 
-size_t Map_MatchRemoveByKeyPredicate(NaiveMap * const map, const char * key, bool (*predicate)(const char *, const char *))
+size_t Map_MatchRemoveByKeyPredicate(NaiveMap * const map,
+									 const char * key,
+									 bool (*predicate)(const char *, const char *))
 {
 	if (!map)
 	{

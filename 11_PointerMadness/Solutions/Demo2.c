@@ -1,30 +1,33 @@
-#include <stdio.h>
-#include <stdlib.h>
-
-
 /*
-	Task: Decide which lines are legal and which could result in undefined behaviour. Also, does
-   this compile?
+	Task: Decide which lines are legal and which could result in undefined behaviour. Also, does this compile?
 */
 
 
 
-// In total: Legal
+#include <stdio.h>
+#include <stdlib.h>
+
+
+// In total: Undefined behaviour
 void CountingDownEvil(const unsigned * const uint_ptr)
 {
-	unsigned * evilCast = uint_ptr;	   // Legal, compiles but with a warning
-	while (*evilCast)				   // Legal
+	// Undefined behaviour, compiles but with a warning. We are casting away the const of the underlying unsigned int
+	unsigned * evilCast = uint_ptr;
+	// Legal, we are just getting the value from "evilCast"
+	while (*evilCast)
 	{
-		printf("%d\n", (*evilCast)--);	  // Legal
+		// Undefined behaviour, uint_ptr was pointing to a const unsigned int
+		printf("%d\n", (*evilCast)--);
 	}
 }
 
 
-
 int main(void)
 {
-	unsigned innocent_int = 5;			// Legal
-	CountingDownEvil(&innocent_int);	// Legal
+	// Legal, nothing interesting here
+	unsigned innocent_int = 5;
+	// Legal, even though "innocent_int" is not const, the function will make its usage more restrictive, which is okay
+	CountingDownEvil(&innocent_int);
 
 	return EXIT_SUCCESS;
 }

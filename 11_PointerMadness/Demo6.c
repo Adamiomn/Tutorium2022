@@ -1,10 +1,11 @@
+/*
+	No task here, just some interesting code.
+	Detailed explanation: https://www.youtube.com/watch?v=p8u_k2LIZyo
+*/
+
 #include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
-
-
-
-// Detailed explanation: https://www.youtube.com/watch?v=p8u_k2LIZyo
 
 
 float fast_invsqrt(float y)
@@ -29,9 +30,7 @@ int main(void)
 	printf("Enter a number that you want to the inverse square root of:\n");
 	scanf("%f", &number);
 
-	// Sidenote: If you leave out scanf and just hard-code "number", the compiler will optimize away
-	// sqrt(...), i.e. calculate it at compile time. This will circumvent linker errors if you don't
-	// have -lm enabled when linking.
+	// Sidenote: If you leave out scanf and just hard-code "number", the compiler will optimize away sqrt(...), i.e. calculate it at compile time. This will circumvent linker errors if you don't have -lm enabled when linking.
 	printf("invsqrt(%f):      %.9f\n", number, 1 / sqrt(number));
 	printf("fast_invsqrt(%f): %.9f\n", number, fast_invsqrt(number));
 
