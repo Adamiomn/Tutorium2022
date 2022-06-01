@@ -1,9 +1,12 @@
-#include <stdio.h>
-#include <stdlib.h>
-
 /*
 	Task: Determine the output of the program without executing it. Does it even compile?
 */
+
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
 
 #define a b
 
