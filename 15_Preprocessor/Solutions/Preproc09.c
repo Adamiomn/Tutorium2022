@@ -21,8 +21,7 @@ int main(void)
 
 
 /*-----------------------------------------------------------------------------------------*/
-// #x is replaced by the variable name inside a string and escape operators are automatically added
-// ("\"a\""). x is just replaced by "a".
+// #x is replaced with the variable name inside a string and escape operators are automatically added ("\"a\""). x is just replaced with "a".
 /*-----------------------------------------------------------------------------------------*/
 
 // [includes are copied]

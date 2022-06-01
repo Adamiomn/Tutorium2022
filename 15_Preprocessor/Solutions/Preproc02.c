@@ -20,7 +20,7 @@ int main(void)
 
 
 /*-----------------------------------------------------------------------------------------*/
-// Every a is replaced by 5. Strings are not affected, however.
+// Every a is replaced with 5. Strings are not affected, however.
 /*-----------------------------------------------------------------------------------------*/
 
 // [includes are copied]

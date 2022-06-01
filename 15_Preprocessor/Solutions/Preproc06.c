@@ -24,9 +24,9 @@ int main(void)
 
 /*-----------------------------------------------------------------------------------------*/
 // The preprocessor now has 2 rules:
-//		1. replace a by b
-//		2. replace b by c
-// So every a is replaced by b and every b is replaced by c.
+//		1. replace a with b
+//		2. replace b with c
+// So every a is replaced with b and every b is replaced with c.
 /*-----------------------------------------------------------------------------------------*/
 
 // [includes are copied]

@@ -21,7 +21,7 @@ int main(void)
 
 
 /*-----------------------------------------------------------------------------------------*/
-// #x is replaced by the variable name inside a string ("a") and x is just replaced by a.
+// #x is replaced with the variable name inside a string ("a") and x is just replaced with a.
 /*-----------------------------------------------------------------------------------------*/
 
 // [includes are copied]

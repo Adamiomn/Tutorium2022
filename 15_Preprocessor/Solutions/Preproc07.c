@@ -26,10 +26,7 @@ int main(void)
 // The preprocessor now has two rules:
 //		1. replace every a with b
 //		2. replace every b with a
-// This seems like an infinite loop but there is another rule that states that every macro can only
-// be used once during an expansion. This means that a -> b (because of the first macro) and then b
-// -> a (because of the second macro). The first macro has already been used so a is not changed to
-// b again.
+// This seems like an infinite loop but there is another rule that states that every macro can only be used once during an expansion. This means that a -> b (because of the first macro) and then b -> a (because of the second macro). The first macro has already been used so a is not changed to b again.
 /*-----------------------------------------------------------------------------------------*/
 
 // [includes are copied]
