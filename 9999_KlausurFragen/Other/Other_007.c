@@ -7,7 +7,6 @@ const float myFloat = 2.718f;
 double myDouble;
 
 // Gib an, ob die Aussagen jeweils wahr (w) oder falsch (f) sind.
-//		a) ☐ 
-//		b) ☐ Die Funktionsdeklaration "const int * func();" ist gültig.
-//		c) ☐ Die Funktionsdeklaration "const int func();" ist gültig.
-//		d) ☐ Die Funktionsdeklaration "double (*func(int))(void);" ist gültig.
+//		a) ☐ Der Aufruf Compute(10, 2.718f, &myDouble) ist gültig.
+//		b) ☐ Der Aufruf Compute(&myInteger, &myFloat, &myDouble); ist gültig.
+//		c) ☐ Der Aufruf Compute(&myInteger, &myInteger, NULL); ist gültig.

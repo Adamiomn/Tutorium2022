@@ -1,8 +1,8 @@
 // Gib an, ob die Aussagen jeweils wahr (w) oder falsch (f) sind.
-//		a) f Die Funktionsdeklarationen "void func();" und "void func(void);" sind äquivalent.
-//		b) w Die Funktionsdeklaration "const int * func();" ist gültig.
-//		c) w Die Funktionsdeklaration "const int func();" ist gültig.
-//		d) w Die Funktionsdeklaration "double (*func(int))(void);" ist gültig.
+//		a) f	Die Funktionsdeklarationen "void func();" und "void func(void);" sind äquivalent.
+//		b) w	Die Funktionsdeklaration "const int * func();" ist gültig.
+//		c) w	Die Funktionsdeklaration "const int func();" ist gültig.
+//		d) w	Die Funktionsdeklaration "double (*func(int))(void);" ist gültig.
 // Erklärung:
 //		a) "void func()" akzeptiert eine beliebige Anzahl an Parametern, während "void func(void)" keine Parameter akzeptiert.
 //		b) Der return-Wert ist ein Pointer auf einen konstanten Integer, was ein sinnvoller Typ ist (siehe dazu im Gegensatz c)).

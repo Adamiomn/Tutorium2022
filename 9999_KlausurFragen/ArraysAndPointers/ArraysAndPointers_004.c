@@ -10,3 +10,4 @@ int ** p2 = &p1;
 //		d) ☐ Der Wert von *p2 ist 0x4a3f.
 //		e) ☐ Der Wert von **p2 ist 40.
 //		f) ☐ p2 belegt doppelt so viel Speicher wie p1, da es ein doppelter Pointer ist.
+//		g) ☐ Der Ausdruck ++p1 inkrementiert den Wert von Number.
