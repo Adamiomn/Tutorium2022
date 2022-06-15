@@ -3,5 +3,7 @@
 		"stdlib.h": "c",
 		"stdio.h": "c",
 		"math.h": "c"
-	}
+	},
+	"editor.formatOnSave": false,
+	"C_Cpp.errorSquiggles": "Disabled"
 }

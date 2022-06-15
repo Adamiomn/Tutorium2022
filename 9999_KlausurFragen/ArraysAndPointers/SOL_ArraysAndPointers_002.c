@@ -1,4 +1,5 @@
 char * ptrString = "Hello";
+char * anotherString = "Hello";
 char arrString[] = "World";
 
 // Beantworte die folgenden Fragen:
@@ -14,9 +15,9 @@ char arrString[] = "World";
 //		d) Ist die Zuweisung arrString[4] = 'p' erlaubt? (ja / nein)
 //				Antwort: ja
 //				Erklärung: Obwohl "World" wie in c) im Read-Only Speicher abgelegt ist, ist arrString ein Array. Deshalb werden die einzelnen Zeichen von "World" in arrString hineinkopiert und sie können verändert werden.
-//		e) Was ergibt der Ausdruck ptrString == (char *)"Hello"? (true / false)
+//		e) Was ergibt der Ausdruck ptrString == anotherString? (true / false)
 //				Antwort: true
-//				Erklärung: ptrString zeigt auf das String-Literal "Hello", welches einmalig im Speicher abgelegt ist (siehe c)).
+//				Erklärung: ptrString zeigt auf das String-Literal "Hello", welches einmalig im Speicher abgelegt ist (siehe c)); dasselbe gilt für anotherString. Die Pointer sind also dieselben.
 //		f) Was ergibt der Ausdruck arrString == "World"? (true / false)
 //				Antwort: false
 //				Erklärung: arrString ist dasselbe wie &arrString[0], zeigt also auf das erste Element. Dieses ist zwar inhaltlich dasselbe wie im Literal "World", die Adresse ist jedoch verschieden, da arrString ein Array ist und dadurch eigenen Speicher hat - im Gegensatz zu ptrString.

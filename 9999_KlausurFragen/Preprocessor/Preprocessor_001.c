@@ -8,5 +8,5 @@
 
 // Gib an, ob die Aussagen jeweils wahr (w) oder falsch (f) sind.
 //		a) ☐ MY_MACRO ist kein Makro, da es keinen Wert besitzt.
-//		b) ☐ MY_MACRO kann nur für #ifdefs und analoge Präprozessor-Befehle verwendet werden.
+//		b) ☐ MY_MACRO kann nur für #ifdefs und analoge Präprozessor-Befehle verwendet werden, nicht aber für tatsächlichen Code.
 //		c) ☐ ITS_TRUE hat den Wert 1.

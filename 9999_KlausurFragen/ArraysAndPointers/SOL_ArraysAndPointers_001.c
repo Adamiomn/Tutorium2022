@@ -12,7 +12,7 @@ int esa[5] = {7, 0, 3};
 //				Antwort: 5
 //				Erklärung: Es ist explizit angegeben.
 //		d) Welchen Wert hat esa[0]?
-//				Antwort: 0
+//				Antwort: 7
 //				Erklärung: dla[0] ist das erste Element (zero-indexing!)
 //		e) Welchen Wert hat esa[4]?
 //				Antwort: 0

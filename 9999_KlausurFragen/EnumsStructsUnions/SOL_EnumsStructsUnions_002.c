@@ -1,4 +1,5 @@
-struct Person {
+struct Person
+{
 	char * name;
 	unsigned age;
 	bool likesChocolate;
@@ -16,4 +17,4 @@ struct Person {
 // Erklärung:
 //		a) Der struct wurde nicht ge-typedef'd. Der Typ ist "struct Person", nicht nur "Person". Die Initialisierung ist jedoch gültig, man muss der Reihenfolge in der Deklaration des structs nicht folgen.
 //		b) Der struct wurde zwar nicht vollständig initialisiert, aber das ist auch nicht nötig.
-//		c) Es wurde nur ein Pointer auf ein struct Person erstellt, aber nie ein tatsächlicher Pointer auf ein struct Person zugewiesen. Der Pointer in myPerson ist ein Garbage-Wert. Die Zuweisungen in den darauffolgenden Zeilen sind jedoch korrekt.
+//		c) Es wurde nur ein Pointer auf ein struct Person erstellt, aber nie ein tatsächlicher Pointer auf ein struct Person zugewiesen. Der Pointer in myPerson ist ein Garbage-Wert. Die Zuweisungen in den darauffolgenden Zeilen wären korrekt.

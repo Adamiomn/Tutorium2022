@@ -9,8 +9,8 @@ int main(void)
 {
 	int COUNTER = 5;
 	void * item;
-	printf("%d", COUNTER);
-	printf("%p", item);
+	printf("%d\n", COUNTER);
+	printf("%p\n", item);
 	return 0;
 }
 

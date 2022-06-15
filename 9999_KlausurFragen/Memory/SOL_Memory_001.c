@@ -5,7 +5,7 @@ malloc(sizeof(int) * 4);
 //		b) w	Der obige Ausdruck kann NULL zurückgeben.
 //		c) f	Der obige Ausdruck gibt einen void-Pointer auf einen Speicherblock der Größe sizeof(int) zurück.
 //		d) f	Der obige Ausdruck reserviert Speicher und setzt alle Bits des Speichers auf 0.
-//		e) w	Der obige Ausdruck reserviert abhängig vom Betriebssystem unterschiedlich viel Speicher.
+//		e) w	Der obige Ausdruck kann (abhängig vom Betriebssystem) unterschiedlich viel Speicher reservieren.
 //		f) f	Wenn der obige Ausdruck die vollständige Anweisung ist, so gibt es immer einen Memory-Leak, egal wie das restliche Programm aussieht.
 // Erklärung:
 //		a) malloc gibt immer einen void-Pointer zurück.

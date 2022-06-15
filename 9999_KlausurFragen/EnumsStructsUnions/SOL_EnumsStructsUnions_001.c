@@ -1,4 +1,5 @@
-enum colors {
+enum colors
+{
 	black = 0,
 	red = 1,
 	green = 2,

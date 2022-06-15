@@ -1,4 +1,5 @@
-union collection {
+union collection
+{
 	int integer;
 	float floating_pt;
 	char name[99];
