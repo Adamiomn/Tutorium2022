@@ -3,5 +3,6 @@
 	"files.associations": {
 		"stdbool.h": "c",
 		"type_traits": "c"
-	}
+	},
+	"editor.formatOnSave": false,
 }
