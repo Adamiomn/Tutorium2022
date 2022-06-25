@@ -30,11 +30,7 @@ int main(void)
 
 // Antwort: 0246811
 // Erklärung:
-//		Wir gehen zuerst den Präprozessor durch. VALUE ist anfangs 10. Damit wird der Wert in der
-//for-Schleife immer 10. 		Nach der Zeile von for(...) wird der Wert auf neudefiniert und auf 1
-//gesetzt. Damit wird von i immer 1 abgezogen. 		Nach der Zeile von else if (...) wird er Wert erneut
-//neudefiniert und auf 4 gesetzt. Im restlichen Programm wird VALUE jedoch nicht mehr verwendet,
-//deshalb ist diese Definition nutzlos. 		Der Code sieht nach dem Präprozessor so aus:
+//		Wir gehen zuerst den Präprozessor durch. VALUE ist anfangs 10. Damit wird der Wert in der for-Schleife immer 10. Nach der Zeile von for(...) wird der Wert auf neudefiniert und auf 1 gesetzt. Damit wird von i immer 1 abgezogen. 		Nach der Zeile von else if (...) wird er Wert erneut neudefiniert und auf 4 gesetzt. Im restlichen Programm wird VALUE jedoch nicht mehr verwendet, deshalb ist diese Definition nutzlos. Der Code sieht nach dem Präprozessor so aus:
 int main(void)
 {
 	int i;

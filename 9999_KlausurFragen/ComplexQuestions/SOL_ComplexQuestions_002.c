@@ -44,11 +44,13 @@ int main(void)
 //		4 ist binär 010
 //		6 & 4 ist damit 010 und die if-Bedingung wahr.
 //		Es wird i ausgegeben: 6
-//		int i = 3 shadowed die äußere Variable. Wenn wir im Code-Block der if-Anweisung auf i
-//zugreifen, wird immer nur das "neue" i verwendet. 		i /= 2 lässt i 1 werden. 		i-- lässt i 0 werden.
+//		int i = 3 shadowed die äußere Variable. Wenn wir im Code-Block der if-Anweisung auf i zugreifen, wird immer nur das "neue" i verwendet.
+//		i /= 2 lässt i 1 werden.
+//		i-- lässt i 0 werden.
 //		Es wird i ausgegeben: 0
 //		i << 3 ergibt 0 << 3 = 0
 //		Damit ist case 0 der switch-Anweisung wahr und es wird !0! ausgegeben.
-//		i = 2 ist eine Zuweisung. Der Rückgabewert einer Zuweisung ist der zugewiesene Wert selbst,
-//also 2. Damit ist die if-Bedingung wahr. 		Es wird =2 ausgegebn. 		Durch die Zuweisung in der
-//if-Bedingung ist i nun 2. Es wird i ausgegeben: 2 		Alles zusammen ergibt: 60!0!=22
+//		i = 2 ist eine Zuweisung. Der Rückgabewert einer Zuweisung ist der zugewiesene Wert selbst, also 2. Damit ist die if-Bedingung wahr.
+//		Es wird =2 ausgegebn.
+//		Durch die Zuweisung in der if-Bedingung ist i nun 2. Es wird i ausgegeben: 2
+//		Alles zusammen ergibt: 60!0!=22
