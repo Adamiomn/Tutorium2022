@@ -4,6 +4,4 @@
 		"stdio.h": "c",
 		"math.h": "c"
 	},
-	"C_Cpp.errorSquiggles": "Disabled",
-	"editor.formatOnSave": false
 }
